@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SGPA Calculator</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+	<section id="splash">
+		<div class="container">
+			<div class="main-container">
+				<div class="text-vertical-center">
+					<h2>SGPA Calculator</h2>
+					<h5 id="tag">For Civil Engineering, SJCE</h5>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="assets/js/jquery.easing.min.js"></script>
+	<script>
+		$(function() {
+			$('section a').bind('click', function(event) {
+				var $anchor = $(this);
+				$('html, body').stop().animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1000, 'easeInOutExpo');
+				event.preventDefault();
+			});
+		});
+	</script>
+</body>
+</html>
